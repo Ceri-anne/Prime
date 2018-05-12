@@ -18,6 +18,7 @@ class PrimeViewController: UIViewController {
     }
     
     @IBOutlet weak var score: UILabel!
+    @IBOutlet weak var highScore: UILabel!
     
     let primes = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97]
     
@@ -83,6 +84,13 @@ class PrimeViewController: UIViewController {
     
     func resetScore() {
         
+        if Int(score.text!)! > Int(highScore.text!)! {
+            updateHighScore()
+        }
         score.text = "0"
+    }
+    
+    func updateHighScore() {
+        highScore.text = score.text
     }
 }
