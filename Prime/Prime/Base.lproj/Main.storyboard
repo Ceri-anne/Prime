@@ -67,6 +67,12 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IxQ-zk-tzb">
+                                <rect key="frame" x="163.5" y="566.5" width="48" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -76,11 +82,14 @@
                             <constraint firstItem="TjQ-jq-X49" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="98" id="UaM-79-rS0"/>
                             <constraint firstItem="UvR-qz-46G" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="bq4-em-h92"/>
                             <constraint firstItem="UvR-qz-46G" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vel-oF-9Fd"/>
+                            <constraint firstItem="IxQ-zk-tzb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xRb-Wu-3Cb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="IxQ-zk-tzb" secondAttribute="bottom" constant="80" id="zuv-to-uB7"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="number" destination="UvR-qz-46G" id="wVy-8e-Ikb"/>
+                        <outlet property="numberLabel" destination="UvR-qz-46G" id="l6K-jK-xHi"/>
+                        <outlet property="resultLabel" destination="IxQ-zk-tzb" id="BeD-tl-GrQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
