@@ -73,15 +73,35 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="HEC-67-QzR">
+                                <rect key="frame" x="16" y="34" width="75" height="20.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3vb-7Q-OHO">
+                                        <rect key="frame" x="0.0" y="0.0" width="44.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kgg-to-5Z4">
+                                        <rect key="frame" x="64.5" y="0.0" width="10.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="leading" secondItem="HEC-67-QzR" secondAttribute="trailing" constant="-91" id="2Ca-mX-hWc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HEC-67-QzR" secondAttribute="trailing" constant="284" id="4nr-Tt-dNN"/>
                             <constraint firstItem="gre-X3-FDR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BA7-9h-phK"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gre-X3-FDR" secondAttribute="bottom" constant="177" id="Gps-bQ-pZm"/>
                             <constraint firstItem="TjQ-jq-X49" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TPp-Bz-YFm"/>
                             <constraint firstItem="TjQ-jq-X49" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="98" id="UaM-79-rS0"/>
                             <constraint firstItem="UvR-qz-46G" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="bq4-em-h92"/>
                             <constraint firstItem="UvR-qz-46G" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vel-oF-9Fd"/>
+                            <constraint firstItem="HEC-67-QzR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="14" id="vjq-dI-gax"/>
                             <constraint firstItem="IxQ-zk-tzb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xRb-Wu-3Cb"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="IxQ-zk-tzb" secondAttribute="bottom" constant="80" id="zuv-to-uB7"/>
                         </constraints>
@@ -90,6 +110,7 @@
                     <connections>
                         <outlet property="numberLabel" destination="UvR-qz-46G" id="l6K-jK-xHi"/>
                         <outlet property="resultLabel" destination="IxQ-zk-tzb" id="BeD-tl-GrQ"/>
+                        <outlet property="score" destination="Kgg-to-5Z4" id="5ff-XS-wO6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

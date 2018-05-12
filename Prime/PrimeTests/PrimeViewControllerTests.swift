@@ -117,4 +117,34 @@ class ViewControllerTests: XCTestCase {
         XCTAssertEqual(viewController.numberLabel.text, String(viewController.number))
     }
     
+    func testScoreAtStart() {
+        
+        // When the app loads
+        // Then score is zero
+        
+        XCTAssertEqual(viewController.score.text, "0")
+    }
+    
+    
+    func testUpdateScore() {
+       
+        // Given the current score is 567
+        // When the score is updated
+        // Then the score is now 568
+        
+        viewController.score.text = "567"
+        viewController.updateScore()
+        XCTAssertEqual(viewController.score.text, "568")
+    }
+    
+    func testResetScore() {
+        
+        // Given the current score is 53
+        // When reset score is called
+        // Then the score is now zero
+        
+        viewController.score.text = "53"
+        viewController.resetScore()
+        XCTAssertEqual(viewController.score.text, "0")
+    }
 }
