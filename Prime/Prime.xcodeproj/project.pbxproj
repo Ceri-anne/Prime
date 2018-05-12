@@ -8,24 +8,45 @@
 
 /* Begin PBXBuildFile section */
 		CC01901820A7197B00E4F539 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC01901720A7197B00E4F539 /* AppDelegate.swift */; };
-		CC01901A20A7197B00E4F539 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC01901920A7197B00E4F539 /* ViewController.swift */; };
+		CC01901A20A7197B00E4F539 /* PrimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC01901920A7197B00E4F539 /* PrimeViewController.swift */; };
 		CC01901D20A7197B00E4F539 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC01901B20A7197B00E4F539 /* Main.storyboard */; };
 		CC01901F20A7197D00E4F539 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC01901E20A7197D00E4F539 /* Assets.xcassets */; };
 		CC01902220A7197D00E4F539 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC01902020A7197D00E4F539 /* LaunchScreen.storyboard */; };
+		CC01903820A71E7C00E4F539 /* PrimeViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC01903720A71E7C00E4F539 /* PrimeViewControllerTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CC01903220A71E5500E4F539 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CC01900C20A7197B00E4F539 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CC01901320A7197B00E4F539;
+			remoteInfo = Prime;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		CC01901420A7197B00E4F539 /* Prime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Prime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC01901720A7197B00E4F539 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CC01901920A7197B00E4F539 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CC01901920A7197B00E4F539 /* PrimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimeViewController.swift; sourceTree = "<group>"; };
 		CC01901C20A7197B00E4F539 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CC01901E20A7197D00E4F539 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CC01902120A7197D00E4F539 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CC01902320A7197D00E4F539 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC01902D20A71E5400E4F539 /* PrimeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrimeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC01903120A71E5500E4F539 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC01903720A71E7C00E4F539 /* PrimeViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimeViewControllerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		CC01901120A7197B00E4F539 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC01902A20A71E5400E4F539 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -39,6 +60,7 @@
 			isa = PBXGroup;
 			children = (
 				CC01901620A7197B00E4F539 /* Prime */,
+				CC01902E20A71E5500E4F539 /* PrimeTests */,
 				CC01901520A7197B00E4F539 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -47,6 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				CC01901420A7197B00E4F539 /* Prime.app */,
+				CC01902D20A71E5400E4F539 /* PrimeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -55,13 +78,22 @@
 			isa = PBXGroup;
 			children = (
 				CC01901720A7197B00E4F539 /* AppDelegate.swift */,
-				CC01901920A7197B00E4F539 /* ViewController.swift */,
+				CC01901920A7197B00E4F539 /* PrimeViewController.swift */,
 				CC01901B20A7197B00E4F539 /* Main.storyboard */,
 				CC01901E20A7197D00E4F539 /* Assets.xcassets */,
 				CC01902020A7197D00E4F539 /* LaunchScreen.storyboard */,
 				CC01902320A7197D00E4F539 /* Info.plist */,
 			);
 			path = Prime;
+			sourceTree = "<group>";
+		};
+		CC01902E20A71E5500E4F539 /* PrimeTests */ = {
+			isa = PBXGroup;
+			children = (
+				CC01903120A71E5500E4F539 /* Info.plist */,
+				CC01903720A71E7C00E4F539 /* PrimeViewControllerTests.swift */,
+			);
+			path = PrimeTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -84,6 +116,24 @@
 			productReference = CC01901420A7197B00E4F539 /* Prime.app */;
 			productType = "com.apple.product-type.application";
 		};
+		CC01902C20A71E5400E4F539 /* PrimeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC01903420A71E5500E4F539 /* Build configuration list for PBXNativeTarget "PrimeTests" */;
+			buildPhases = (
+				CC01902920A71E5400E4F539 /* Sources */,
+				CC01902A20A71E5400E4F539 /* Frameworks */,
+				CC01902B20A71E5400E4F539 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CC01903320A71E5500E4F539 /* PBXTargetDependency */,
+			);
+			name = PrimeTests;
+			productName = PrimeTests;
+			productReference = CC01902D20A71E5400E4F539 /* PrimeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -96,6 +146,11 @@
 				TargetAttributes = {
 					CC01901320A7197B00E4F539 = {
 						CreatedOnToolsVersion = 9.3;
+					};
+					CC01902C20A71E5400E4F539 = {
+						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 0930;
+						TestTargetID = CC01901320A7197B00E4F539;
 					};
 				};
 			};
@@ -113,6 +168,7 @@
 			projectRoot = "";
 			targets = (
 				CC01901320A7197B00E4F539 /* Prime */,
+				CC01902C20A71E5400E4F539 /* PrimeTests */,
 			);
 		};
 /* End PBXProject section */
@@ -128,6 +184,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CC01902B20A71E5400E4F539 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -135,12 +198,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC01901A20A7197B00E4F539 /* ViewController.swift in Sources */,
+				CC01901A20A7197B00E4F539 /* PrimeViewController.swift in Sources */,
 				CC01901820A7197B00E4F539 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CC01902920A71E5400E4F539 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC01903820A71E7C00E4F539 /* PrimeViewControllerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CC01903320A71E5500E4F539 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CC01901320A7197B00E4F539 /* Prime */;
+			targetProxy = CC01903220A71E5500E4F539 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		CC01901B20A7197B00E4F539 /* Main.storyboard */ = {
@@ -312,6 +391,49 @@
 			};
 			name = Release;
 		};
+		CC01903520A71E5500E4F539 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6RSSBKDAGB;
+				INFOPLIST_FILE = PrimeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "uk.co.ceri-anne.PrimeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Prime.app/Prime";
+			};
+			name = Debug;
+		};
+		CC01903620A71E5500E4F539 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6RSSBKDAGB;
+				INFOPLIST_FILE = PrimeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "uk.co.ceri-anne.PrimeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Prime.app/Prime";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -329,6 +451,15 @@
 			buildConfigurations = (
 				CC01902720A7197D00E4F539 /* Debug */,
 				CC01902820A7197D00E4F539 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC01903420A71E5500E4F539 /* Build configuration list for PBXNativeTarget "PrimeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC01903520A71E5500E4F539 /* Debug */,
+				CC01903620A71E5500E4F539 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
