@@ -10,8 +10,14 @@ import XCTest
 
 class ViewControllerTests: XCTestCase {
     
+    var viewController: PrimeViewController!
     
-    let viewController = PrimeViewController()
+    override func setUp() {
+        super.setUp()
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        viewController = storyboard.instantiateInitialViewController() as! PrimeViewController
+        viewController.loadView()
+    }
     
     func testRandomNumber() {
         
@@ -21,10 +27,81 @@ class ViewControllerTests: XCTestCase {
         
         let maximum = 33
         let result = viewController.generateRandomInt(below: maximum)
-        XCTAssertEqual(result,3)
+        XCTAssertTrue(result > 0)
+        XCTAssertTrue(result <= 33)
         
     }
     
-   
+    func testIsPrimeWithPrime() {
+    
+        // Given a prime number
+        // When isPrime is called
+        // The result is true
+    
+        let number = 13
+        let result = viewController.isPrime(number)
+        XCTAssertTrue(result)
+    
+    }
+    
+    func testIsPrimeWithNonPrime() {
+        
+        // Given a prime number
+        // When isPrime is called
+        // The result is true
+        
+        let number = 9
+        let result = viewController.isPrime(number)
+        XCTAssertFalse(result)
+        
+    }
+    
+    func testCheckAnswerWithPrimeIncorrect() {
+        
+        // Given a prime number is displayed
+        // When "No" is chosen
+        // Check Answer sets the correct answer and colour for resultLabel
+
+        viewController.checkAnswer("NO", actual: 13)
+        
+        XCTAssertEqual(viewController.resultLabel.text, "Incorrect 13 is Prime")
+    
+    }
+    
+    func testCheckAnswerWithPrimeCorrect() {
+        
+        // Given a prime number is displayed
+        // When "No" is chosen
+        // Check Answer sets the correct answer and colour for resultLabel
+        
+        viewController.checkAnswer("YES", actual: 13)
+        
+        XCTAssertEqual(viewController.resultLabel.text, "Correct 13 is Prime")
+        
+    }
+    
+    func testCheckAnswerWithNonPrimeCorrect() {
+        
+        // Given a prime number is displayed
+        // When "No" is chosen
+        // Check Answer sets the correct answer and colour for resultLabel
+        
+        viewController.checkAnswer("NO", actual: 4)
+        
+        XCTAssertEqual(viewController.resultLabel.text, "Correct 4 is not Prime")
+        
+    }
+    
+    func testCheckAnswerWithNonPrimeIncorrect() {
+        
+        // Given a prime number is displayed
+        // When "No" is chosen
+        // Check Answer sets the correct answer and colour for resultLabel
+        
+        viewController.checkAnswer("YES", actual: 4)
+        
+        XCTAssertEqual(viewController.resultLabel.text, "Incorrect 4 is not Prime")
+        
+    }
     
 }

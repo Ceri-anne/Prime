@@ -14,7 +14,7 @@ class PrimeViewController: UIViewController {
     @IBOutlet weak var resultLabel: UILabel!
     @IBAction func buttonPressed(_ sender: UIButton) {
         let answer = sender.titleLabel?.text
-        checkAnswer(answer!)
+        checkAnswer(answer!, actual: number)
     }
     
     let primes = [2,3,5,7,11,13,17,19]
@@ -27,8 +27,9 @@ class PrimeViewController: UIViewController {
     }
 
     func generateRandomInt(below maximum: Int) -> Int {
-        let max = UInt32(maximum)
-        let random = arc4random_uniform(max)
+        // Do not return zero
+        let max = UInt32(maximum - 1)
+        let random = arc4random_uniform(max) + 1
         return Int(random)
     }
     
@@ -41,25 +42,26 @@ class PrimeViewController: UIViewController {
         numberLabel.text = String(number)
     }
     
-    func checkAnswer(_ answer: String) {
+    func checkAnswer(_ answer: String, actual: Int) {
         let choiceIsPrime = answer == "YES"
-        let numberIsPrime = isPrime(number)
+        let numberIsPrime = isPrime(actual)
         
         switch (choiceIsPrime, numberIsPrime) {
         case (true,true):
-            resultLabel.text = "Correct \(number) is Prime"
+            resultLabel.text = "Correct \(actual) is Prime"
             resultLabel.textColor = .green
         case (true,false):
-            resultLabel.text = "Incorrect \(number) is not Prime"
+            resultLabel.text = "Incorrect \(actual) is not Prime"
             resultLabel.textColor = .red
         case (false,false):
-            resultLabel.text = "Correct \(number) is not Prime"
+            resultLabel.text = "Correct \(actual) is not Prime"
             resultLabel.textColor = .green
         case (false,true):
-            resultLabel.text = "Incorrect \(number) is Prime"
+            print(actual)
+            resultLabel.text = "Incorrect \(actual) is Prime"
             resultLabel.textColor = .red
         }
         
-    startGame()
+        startGame()
     }
 }
