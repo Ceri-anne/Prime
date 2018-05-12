@@ -30,8 +30,15 @@ class PrimeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         startGame()
+        setUpAccessibility()
     }
 
+    func setUpAccessibility() {
+        scoreLabel.accessibilityLabel = "Score is \(scoreLabel.text!)"
+        highScoreLabel.accessibilityLabel = "High Score is \(highScoreLabel.text!)"
+
+    }
+    
     func generateRandomInt(below maximum: Int) -> Int {
         // Do not return zero
         let max = UInt32(maximum - 1)

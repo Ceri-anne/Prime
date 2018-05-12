@@ -13,10 +13,18 @@
 		CC01901F20A7197D00E4F539 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC01901E20A7197D00E4F539 /* Assets.xcassets */; };
 		CC01902220A7197D00E4F539 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC01902020A7197D00E4F539 /* LaunchScreen.storyboard */; };
 		CC01903820A71E7C00E4F539 /* PrimeViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC01903720A71E7C00E4F539 /* PrimeViewControllerTests.swift */; };
+		CC01904020A7417C00E4F539 /* PrimeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC01903F20A7417C00E4F539 /* PrimeUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		CC01903220A71E5500E4F539 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CC01900C20A7197B00E4F539 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CC01901320A7197B00E4F539;
+			remoteInfo = Prime;
+		};
+		CC01904220A7417C00E4F539 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = CC01900C20A7197B00E4F539 /* Project object */;
 			proxyType = 1;
@@ -36,6 +44,9 @@
 		CC01902D20A71E5400E4F539 /* PrimeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrimeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC01903120A71E5500E4F539 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC01903720A71E7C00E4F539 /* PrimeViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimeViewControllerTests.swift; sourceTree = "<group>"; };
+		CC01903D20A7417C00E4F539 /* PrimeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrimeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC01903F20A7417C00E4F539 /* PrimeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimeUITests.swift; sourceTree = "<group>"; };
+		CC01904120A7417C00E4F539 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +64,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CC01903A20A7417C00E4F539 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -61,6 +79,7 @@
 			children = (
 				CC01901620A7197B00E4F539 /* Prime */,
 				CC01902E20A71E5500E4F539 /* PrimeTests */,
+				CC01903E20A7417C00E4F539 /* PrimeUITests */,
 				CC01901520A7197B00E4F539 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -70,6 +89,7 @@
 			children = (
 				CC01901420A7197B00E4F539 /* Prime.app */,
 				CC01902D20A71E5400E4F539 /* PrimeTests.xctest */,
+				CC01903D20A7417C00E4F539 /* PrimeUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -94,6 +114,15 @@
 				CC01903720A71E7C00E4F539 /* PrimeViewControllerTests.swift */,
 			);
 			path = PrimeTests;
+			sourceTree = "<group>";
+		};
+		CC01903E20A7417C00E4F539 /* PrimeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CC01903F20A7417C00E4F539 /* PrimeUITests.swift */,
+				CC01904120A7417C00E4F539 /* Info.plist */,
+			);
+			path = PrimeUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,6 +163,24 @@
 			productReference = CC01902D20A71E5400E4F539 /* PrimeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		CC01903C20A7417C00E4F539 /* PrimeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC01904620A7417C00E4F539 /* Build configuration list for PBXNativeTarget "PrimeUITests" */;
+			buildPhases = (
+				CC01903920A7417C00E4F539 /* Sources */,
+				CC01903A20A7417C00E4F539 /* Frameworks */,
+				CC01903B20A7417C00E4F539 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CC01904320A7417C00E4F539 /* PBXTargetDependency */,
+			);
+			name = PrimeUITests;
+			productName = PrimeUITests;
+			productReference = CC01903D20A7417C00E4F539 /* PrimeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -150,6 +197,10 @@
 					CC01902C20A71E5400E4F539 = {
 						CreatedOnToolsVersion = 9.3;
 						LastSwiftMigration = 0930;
+						TestTargetID = CC01901320A7197B00E4F539;
+					};
+					CC01903C20A7417C00E4F539 = {
+						CreatedOnToolsVersion = 9.3;
 						TestTargetID = CC01901320A7197B00E4F539;
 					};
 				};
@@ -169,6 +220,7 @@
 			targets = (
 				CC01901320A7197B00E4F539 /* Prime */,
 				CC01902C20A71E5400E4F539 /* PrimeTests */,
+				CC01903C20A7417C00E4F539 /* PrimeUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -185,6 +237,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		CC01902B20A71E5400E4F539 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC01903B20A7417C00E4F539 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -211,6 +270,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CC01903920A7417C00E4F539 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC01904020A7417C00E4F539 /* PrimeUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -218,6 +285,11 @@
 			isa = PBXTargetDependency;
 			target = CC01901320A7197B00E4F539 /* Prime */;
 			targetProxy = CC01903220A71E5500E4F539 /* PBXContainerItemProxy */;
+		};
+		CC01904320A7417C00E4F539 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CC01901320A7197B00E4F539 /* Prime */;
+			targetProxy = CC01904220A7417C00E4F539 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -434,6 +506,44 @@
 			};
 			name = Release;
 		};
+		CC01904420A7417C00E4F539 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6RSSBKDAGB;
+				INFOPLIST_FILE = PrimeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "uk.co.ceri-anne.PrimeUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Prime;
+			};
+			name = Debug;
+		};
+		CC01904520A7417C00E4F539 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6RSSBKDAGB;
+				INFOPLIST_FILE = PrimeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "uk.co.ceri-anne.PrimeUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Prime;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -460,6 +570,15 @@
 			buildConfigurations = (
 				CC01903520A71E5500E4F539 /* Debug */,
 				CC01903620A71E5500E4F539 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC01904620A7417C00E4F539 /* Build configuration list for PBXNativeTarget "PrimeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC01904420A7417C00E4F539 /* Debug */,
+				CC01904520A7417C00E4F539 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
