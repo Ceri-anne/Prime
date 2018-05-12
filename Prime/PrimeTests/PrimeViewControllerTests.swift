@@ -65,7 +65,8 @@ class ViewControllerTests: XCTestCase {
         viewController.checkAnswer("NO", actual: 13)
         
         XCTAssertEqual(viewController.resultLabel.text, "Incorrect 13 is Prime")
-    
+        XCTAssertEqual(viewController.resultLabel.textColor, .red)
+
     }
     
     func testCheckAnswerWithPrimeCorrect() {
@@ -77,7 +78,8 @@ class ViewControllerTests: XCTestCase {
         viewController.checkAnswer("YES", actual: 13)
         
         XCTAssertEqual(viewController.resultLabel.text, "Correct 13 is Prime")
-        
+        XCTAssertEqual(viewController.resultLabel.textColor, .green)
+
     }
     
     func testCheckAnswerWithNonPrimeCorrect() {
@@ -89,7 +91,8 @@ class ViewControllerTests: XCTestCase {
         viewController.checkAnswer("NO", actual: 4)
         
         XCTAssertEqual(viewController.resultLabel.text, "Correct 4 is not Prime")
-        
+        XCTAssertEqual(viewController.resultLabel.textColor, .green)
+
     }
     
     func testCheckAnswerWithNonPrimeIncorrect() {
@@ -101,7 +104,17 @@ class ViewControllerTests: XCTestCase {
         viewController.checkAnswer("YES", actual: 4)
         
         XCTAssertEqual(viewController.resultLabel.text, "Incorrect 4 is not Prime")
+        XCTAssertEqual(viewController.resultLabel.textColor, .red)
         
+    }
+    
+    func testStartGame() {
+        
+        // When the game is started
+        // The numberLabel is populated correctly
+        
+        viewController.startGame()
+        XCTAssertEqual(viewController.numberLabel.text, String(viewController.number))
     }
     
 }
