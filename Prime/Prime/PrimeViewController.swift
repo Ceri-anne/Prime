@@ -23,27 +23,43 @@ class PrimeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        number = generateRandomInt(below: maximum)
-        numberLabel.text = String(number)
+        startGame()
     }
 
     func generateRandomInt(below maximum: Int) -> Int {
-        return 3
+        let max = UInt32(maximum)
+        let random = arc4random_uniform(max)
+        return Int(random)
     }
     
     func isPrime(_ number: Int) -> Bool {
         return primes.contains(number)
     }
     
+    func startGame() {
+        number = generateRandomInt(below: maximum)
+        numberLabel.text = String(number)
+    }
+    
     func checkAnswer(_ answer: String) {
         let choiceIsPrime = answer == "YES"
         let numberIsPrime = isPrime(number)
-        if choiceIsPrime == numberIsPrime {
-            resultLabel.text = "Correct"
+        
+        switch (choiceIsPrime, numberIsPrime) {
+        case (true,true):
+            resultLabel.text = "Correct \(number) is Prime"
             resultLabel.textColor = .green
-        } else {
-            resultLabel.text = "Incorrect"
+        case (true,false):
+            resultLabel.text = "Incorrect \(number) is not Prime"
+            resultLabel.textColor = .red
+        case (false,false):
+            resultLabel.text = "Correct \(number) is not Prime"
+            resultLabel.textColor = .green
+        case (false,true):
+            resultLabel.text = "Incorrect \(number) is Prime"
             resultLabel.textColor = .red
         }
+        
+    startGame()
     }
 }
