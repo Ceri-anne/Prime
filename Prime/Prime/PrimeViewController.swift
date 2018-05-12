@@ -17,13 +17,15 @@ class PrimeViewController: UIViewController {
         checkAnswer(answer!, actual: number)
     }
     
-    @IBOutlet weak var score: UILabel!
-    @IBOutlet weak var highScore: UILabel!
+    @IBOutlet weak var scoreLabel: UILabel!
+    @IBOutlet weak var highScoreLabel: UILabel!
     
     let primes = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97]
     
     let maximum = 20
     var number: Int = 0
+    var score: Int = 0
+    var highScore: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,8 +66,7 @@ class PrimeViewController: UIViewController {
             resultLabel.textColor = .green
             updateScore()
         case (false,true):
-            print(actual)
-            resultLabel.text = "Incorrect \(actual) is Prime"
+             resultLabel.text = "Incorrect \(actual) is Prime"
             resultLabel.textColor = .red
             resetScore()
         }
@@ -74,23 +75,17 @@ class PrimeViewController: UIViewController {
     }
     
     func updateScore() {
-        
-        guard let scoreText = score?.text, let currentScore = Int(scoreText) else {
-            return
-        }
-        
-        score.text = String(currentScore + 1)
+        score = score + 1
+        scoreLabel.text = String(score)
     }
     
     func resetScore() {
-        
-        if Int(score.text!)! > Int(highScore.text!)! {
-            updateHighScore()
+        if score > highScore {
+            highScore = score
+            highScoreLabel.text = String(highScore)
         }
-        score.text = "0"
+        score = 0
+        scoreLabel.text = "0"
     }
     
-    func updateHighScore() {
-        highScore.text = score.text
-    }
 }

@@ -127,10 +127,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="highScore" destination="bbt-Pu-Gg3" id="c7F-xa-lXq"/>
+                        <outlet property="highScoreLabel" destination="bbt-Pu-Gg3" id="vJc-46-nuA"/>
                         <outlet property="numberLabel" destination="UvR-qz-46G" id="l6K-jK-xHi"/>
                         <outlet property="resultLabel" destination="IxQ-zk-tzb" id="BeD-tl-GrQ"/>
-                        <outlet property="score" destination="Kgg-to-5Z4" id="5ff-XS-wO6"/>
+                        <outlet property="scoreLabel" destination="Kgg-to-5Z4" id="Tjh-4D-gt2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

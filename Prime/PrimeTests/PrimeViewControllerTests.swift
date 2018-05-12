@@ -122,7 +122,7 @@ class ViewControllerTests: XCTestCase {
         // When the app loads
         // Then score is zero
         
-        XCTAssertEqual(viewController.score.text, "0")
+        XCTAssertEqual(viewController.scoreLabel.text, "0")
     }
     
     
@@ -132,9 +132,11 @@ class ViewControllerTests: XCTestCase {
         // When the score is updated
         // Then the score is set to 568
         
-        viewController.score.text = "567"
+        viewController.score = 567
         viewController.updateScore()
-        XCTAssertEqual(viewController.score.text, "568")
+        XCTAssertEqual(viewController.score, 568)
+        XCTAssertEqual(viewController.scoreLabel.text, "568")
+
     }
     
     func testResetScore() {
@@ -143,9 +145,9 @@ class ViewControllerTests: XCTestCase {
         // When reset score is called
         // Then the score is set to zero
         
-        viewController.score.text = "53"
+        viewController.scoreLabel.text = "53"
         viewController.resetScore()
-        XCTAssertEqual(viewController.score.text, "0")
+        XCTAssertEqual(viewController.scoreLabel.text, "0")
     }
     
     func testResetScoreWithHighScore() {
@@ -156,11 +158,16 @@ class ViewControllerTests: XCTestCase {
         // Then the score is set to zero
         // And the high score is set to 53
         
-        viewController.score.text = "53"
-        viewController.highScore.text = "20"
+        viewController.score = 53
+        viewController.scoreLabel.text = "53"
+        viewController.highScore = 20
+        viewController.highScoreLabel.text = "20"
+
         viewController.resetScore()
-        XCTAssertEqual(viewController.score.text, "0")
-        XCTAssertEqual(viewController.highScore.text, "53")
+        XCTAssertEqual(viewController.score, 0)
+        XCTAssertEqual(viewController.scoreLabel.text, "0")
+        XCTAssertEqual(viewController.highScore, 53)
+        XCTAssertEqual(viewController.highScoreLabel.text, "53")
     }
     
     func testResetScoreWithLowScore() {
@@ -171,11 +178,17 @@ class ViewControllerTests: XCTestCase {
         // Then the score is set to zero
         // And the high score stays at 20
         
-        viewController.score.text = "3"
-        viewController.highScore.text = "20"
+        viewController.score = 3
+        viewController.scoreLabel.text = "3"
+        viewController.highScore = 20
+        viewController.highScoreLabel.text = "20"
+
         viewController.resetScore()
-        XCTAssertEqual(viewController.score.text, "0")
-        XCTAssertEqual(viewController.highScore.text, "20")
+        XCTAssertEqual(viewController.score, 0)
+        XCTAssertEqual(viewController.scoreLabel.text, "0")
+        XCTAssertEqual(viewController.highScore, 20)
+        XCTAssertEqual(viewController.highScoreLabel.text, "20")
+       
     }
     
 }
