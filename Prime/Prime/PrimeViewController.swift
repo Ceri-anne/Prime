@@ -10,22 +10,34 @@ import UIKit
 
 class PrimeViewController: UIViewController {
 
+    // MARK: Outlets
+    
     @IBOutlet weak var numberLabel: UILabel!
     @IBOutlet weak var resultLabel: UILabel!
-    @IBAction func buttonPressed(_ sender: UIButton) {
-        let answer = sender.titleLabel?.text
-        checkAnswer(answer!, actual: number)
-    }
-    
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var highScoreLabel: UILabel!
+    
+    //MARK: Actions
+    
+    @IBAction func buttonPressed(_ sender: UIButton) {
+        if let answer = sender.titleLabel?.text {
+            checkAnswer(answer, actual: number)
+        }
+    }
+    
+    // MARK: Variables
     
     let primes = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97]
     
     let maximum = 20
     var number: Int = 0
-    var score: Int = 0
     var highScore: Int = 0
+    
+    var score: Int = 0 {
+        didSet {
+            scoreLabel.text = String(score)
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -83,7 +95,6 @@ class PrimeViewController: UIViewController {
     
     func updateScore() {
         score = score + 1
-        scoreLabel.text = String(score)
     }
     
     func resetScore() {
@@ -92,7 +103,6 @@ class PrimeViewController: UIViewController {
             highScoreLabel.text = String(highScore)
         }
         score = 0
-        scoreLabel.text = "0"
     }
     
 }
